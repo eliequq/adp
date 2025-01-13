@@ -1,0 +1,65 @@
+.footer {
+    background-color: #292828; /* Темный фон футера */
+    padding: 3rem 5vw; /* Отступы сверху и снизу, отступы по бокам на основе ширины экрана */
+    color: aliceblue; /* Цвет текста */
+    display: flex;
+    justify-content: center; /* Выравнивание по центру */
+    align-items: center;
+    flex-direction: column; /* Размещение элементов вертикально */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column; /* Элементы в колонку */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem; /* Расстояние между ссылками */
+    margin-top: 1rem;
+  }
+  
+  .footer-links a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #1db954; /* Изменение цвета на зеленый при наведении (например, как у Spotify) */
+  }
+  
+  /* Медиазапросы для разных экранов */
+  
+  /* Для экранов меньше 1024px */
+  @media (max-width: 1024px) {
+    .footer-content {
+      padding: 1rem;
+    }
+    .footer-links {
+      gap: 1.5rem; /* Уменьшаем расстояние между ссылками */
+    }
+  }
+  
+  /* Для экранов меньше 768px */
+  @media (max-width: 768px) {
+    .footer-content {
+      padding: 0.5rem;
+    }
+    .footer-links {
+      gap: 1rem; /* Еще меньше расстояние между ссылками */
+    }
+  }
+  
+  /* Для экранов меньше 480px */
+  @media (max-width: 480px) {
+    .footer-content {
+      padding: 0.5rem;
+    }
+    .footer-links {
+      gap: 0.5rem; /* Еще меньше расстояние между ссылками */
+    }
+  }

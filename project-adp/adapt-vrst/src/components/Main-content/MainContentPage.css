@@ -1,0 +1,189 @@
+.maincon {
+  display: flex;
+  flex-direction: row; /* Горизонтальное размещение элементов */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: space-between; /* Элементы слева и справа */
+  padding: 5vw; /* Используем относительные единицы */
+  background-color: #292828; /* Цвет фона */
+}
+
+.maincon-image img {
+  width: 100%; /* Сделаем изображение адаптивным */
+  max-width: 600px; /* Ограничиваем максимальную ширину */
+  height: auto;
+  margin-right: 2rem; /* Отступ между изображением и контентом */
+  margin-left: 25rem;
+}
+
+.maincon-content {
+  text-align: left; /* Выравнивание текста по левому краю */
+  padding: 15rem;
+  max-width: 50%; /* Ограничиваем максимальную ширину контента */
+  color: aliceblue; /* Цвет текста */
+}
+
+.maincon-icon img {
+  max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
+  margin-bottom: 1rem;
+  position: absolute; /* Позиционирование относительно родителя */
+  top: 75px; /* Отступ сверху */
+  left: 470px; /* Отступ слева */
+  z-index: 5; /* Чтобы логотип был поверх изображения */
+}
+
+h1 {
+  font-size: 2.5rem; /* Используем относительный размер шрифта */
+  margin: 1rem 0;
+}
+
+h1 span {
+  font-size: 1.5rem; /* Размер для части заголовка */
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start; /* Иконки по левому краю */
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.icons img {
+  width: 5vw; /* Ширина иконок будет зависеть от ширины экрана */
+  max-width: 40px; /* Максимальная ширина */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.1); /* Эффект наведения на иконки */
+}
+
+/* Медиазапросы для различных экранов */
+
+@media (max-width: 1280px) {
+  .maincon {
+      padding: 4vw 3vw;
+  }
+
+  .maincon-image img {
+      margin-left: 15rem; /* Уменьшаем отступы для экрана */
+  }
+
+  .maincon-content {
+      padding: 10rem; /* Уменьшаем отступы для контента */
+  }
+
+  .maincon-icon img {
+      top: 50px; /* Уменьшаем верхний отступ для логотипа */
+      left: 350px; /* Уменьшаем отступ слева */
+  }
+}
+
+@media (max-width: 1024px) {
+  .maincon {
+      flex-direction: column; /* Меняем направление на вертикальное */
+      padding: 5vw 2vw; /* Уменьшаем отступы */
+  }
+
+  .maincon-image img {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 500px; /* Уменьшаем максимальную ширину */
+  }
+
+  .maincon-content {
+      max-width: 100%; /* Контент занимает всю ширину */
+      padding: 5rem; /* Уменьшаем отступы */
+  }
+
+  .maincon-icon img {
+      top: 20px; /* Логотип будет ближе к верхнему краю */
+      left: 10px; /* Логотип сдвинут к левому краю */
+      max-width: 120px; /* Уменьшаем размер логотипа */
+  }
+
+  h1 {
+      font-size: 2rem; /* Меньше размер шрифта */
+  }
+
+  .icons img {
+      width: 8vw; /* Ширина иконок будет зависеть от ширины экрана */
+      max-width: 30px; /* Уменьшаем максимальную ширину */
+  }
+}
+
+@media (max-width: 768px) {
+  .maincon {
+      padding: 4vw 2vw; /* Уменьшаем отступы для маленьких экранов */
+  }
+
+  .maincon-image img {
+      max-width: 90%; /* Изображение становится ещё более гибким */
+      margin-left: 0;
+  }
+
+  .maincon-content {
+      padding: 3rem;
+      max-width: 100%;
+  }
+
+  .maincon-icon img {
+      top: 15px;
+      left: 5px;
+      max-width: 100px;
+  }
+
+  h1 {
+      font-size: 1.8rem; /* Уменьшаем размер шрифта */
+  }
+
+  p {
+      font-size: 1rem; /* Меньше размер шрифта */
+  }
+
+  .icons img {
+      width: 10vw;
+      max-width: 25px; /* Уменьшаем максимальную ширину */
+  }
+}
+
+@media (max-width: 480px) {
+  .maincon {
+      padding: 4vw 1.5vw; /* Меньше отступы для очень маленьких экранов */
+  }
+
+  .maincon-image img {
+      max-width: 100%;
+  }
+
+  .maincon-content {
+      padding: 2rem;
+      max-width: 100%;
+  }
+
+  .maincon-icon img {
+      top: 10px;
+      left: 0;
+      max-width: 80px;
+  }
+
+  h1 {
+      font-size: 1.5rem; /* Очень маленький шрифт */
+  }
+
+  p {
+      font-size: 0.9rem; /* Меньше размер шрифта */
+  }
+
+  .icons img {
+      width: 12vw;
+      max-width: 20px; /* Очень маленькие иконки */
+  }
+}
+  
+   

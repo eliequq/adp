@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Для всех элементов, включая псевдоэлементы */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Общее оформление для html и body */
+html, body {
+  height: 100%; /* Задание полной высоты для родительских элементов */
+  font-family: Arial, sans-serif; /* Установка шрифта */
+  line-height: 1.5; /* Интерлиньяж для лучшего восприятия текста */
+  color: #f5f3f3; /* Цвет текста по умолчанию */
+  background-color: #292828; /* Цвет фона */
+  -webkit-font-smoothing: antialiased; /* Для лучшей сглаженности шрифтов на Mac */
+  -moz-osx-font-smoothing: grayscale; /* Для лучшей сглаженности шрифтов на Firefox */
+}
+
+/* Для корня документа */
+html {
+  font-size: 16px; /* Стандартный размер шрифта для текста */
+  scroll-behavior: smooth; /* Плавная прокрутка при переходах */
+}
+
+/* Для body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Универсальные стили для изображений */
+img {
+  max-width: 100%; /* Все изображения адаптируются к ширине контейнера */
+  height: auto; /* Высота изображений будет пропорциональной */
+  display: block; /* Убирает отступы снизу изображения */
+}
+
+/* Стили для ссылок */
+a {
+  text-decoration: none; /* Убирает подчеркивание по умолчанию */
+  color: inherit; /* Наследует цвет от родительского элемента */
+}
+
+/* Стили для кнопок */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  outline: none;
+}
+
+/* Универсальные стили для таблиц */
+table {
+  border-collapse: collapse; /* Убирает двойные границы у таблиц */
+  width: 100%; /* Стандартная ширина для таблиц */
+}
+
+/* Для улучшенной видимости на маленьких экранах */
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* Управление прокруткой на всех экранах */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Обновления для мобильных устройств */
+@media (max-width: 768px) {
+  /* Для мобильных и планшетов */
+  body {
+      font-size: 14px; /* Уменьшаем размер шрифта для малых экранов */
+  }
+}
