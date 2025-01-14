@@ -20,6 +20,9 @@ html, body {
   background-color: #292828; /* Цвет фона */
   -webkit-font-smoothing: antialiased; /* Для лучшей сглаженности шрифтов на Mac */
   -moz-osx-font-smoothing: grayscale; /* Для лучшей сглаженности шрифтов на Firefox */
+ 
+    overflow-x: hidden;  /* Отключаем прокрутку */
+
 }
 
 /* Для корня документа */
@@ -77,10 +80,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Обновления для мобильных устройств */
+html {
+  scrollbar-color: #616163 #464545;
+  scrollbar-width: thin;
+}
+
 @media (max-width: 768px) {
-  /* Для мобильных и планшетов */
-  body {
-      font-size: 14px; /* Уменьшаем размер шрифта для малых экранов */
+  html, body {
+  overflow-x: hidden;
   }
+  
 }
