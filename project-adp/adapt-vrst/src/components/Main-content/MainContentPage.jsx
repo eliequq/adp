@@ -1,4 +1,3 @@
-import logotipIII from '/left-III.svg';
 import icon1 from '/icon1.svg';
 import icon2 from '/icon2.svg';
 import icon3 from '/icon3.svg';
@@ -14,9 +13,7 @@ export default function MainContentPage() {
                 <img src={mic} alt="mic" />
             </div>
             <div className="maincon-content">
-                <div className="maincon-icon">
-                    <img src={logotipIII} alt="logotipIII" />
-                </div>
+                 
                 <h1>
                     Take your podcast to the <span><br />next level</span>
                 </h1>

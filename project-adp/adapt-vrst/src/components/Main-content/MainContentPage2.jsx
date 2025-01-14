@@ -7,16 +7,12 @@ export default function MainContentPage2 (){
 
     return (
         <section className>
-       
-       <div className="episode-container">
-      <div className='nav-panel'> 
+       <div className='nav-panel'> 
         <h1 className="title">Latest episodes</h1> 
-        <nav className='nav-btn'>
-        <button className='button__btn__nav'>Clic</button>
-        <button className='button__btn__nav2'>Click2</button>
-        <button className='button__btn__nav3'>Click3</button>
-        </nav>
-      </div>
+        <button className="button__btn">View Episode Details</button>
+         </div>
+       <div className="episode-container">
+      
       <div className="card">
         <div className="image-container">
           <img

@@ -1,18 +1,23 @@
 .maincon {
   display: flex;
-  flex-direction: row; /* Горизонтальное размещение элементов */
+  flex-direction: row;/* Горизонтальное размещение элементов */
   align-items: center; /* Выравнивание по вертикали */
-  justify-content: space-between; /* Элементы слева и справа */
+  justify-content: center; /* Элементы слева и справа */
   padding: 5vw; /* Используем относительные единицы */
   background-color: #292828; /* Цвет фона */
+  padding-bottom: 0%;
+  margin-left: 100px;
+}
+
+.maincon-image {
+  height: auto;
+  max-width: auto;
+  
+
 }
 
 .maincon-image img {
-  width: 100%; /* Сделаем изображение адаптивным */
-  max-width: 600px; /* Ограничиваем максимальную ширину */
-  height: auto;
-  margin-right: 2rem; /* Отступ между изображением и контентом */
-  margin-left: 25rem;
+  width: 700px;
 }
 
 .maincon-content {
@@ -22,14 +27,6 @@
   color: aliceblue; /* Цвет текста */
 }
 
-.maincon-icon img {
-  max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
-  margin-bottom: 1rem;
-  position: absolute; /* Позиционирование относительно родителя */
-  top: 75px; /* Отступ сверху */
-  left: 470px; /* Отступ слева */
-  z-index: 5; /* Чтобы логотип был поверх изображения */
-}
 
 h1 {
   font-size: 2.5rem; /* Используем относительный размер шрифта */
@@ -63,126 +60,315 @@ p {
   transform: scale(1.1); /* Эффект наведения на иконки */
 }
 
-/* Медиазапросы для различных экранов */
+@media (max-width: 1618px) {
 
-@media (max-width: 1280px) {
   .maincon {
-      padding: 4vw 3vw;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 100px;
+  
+  }
+}
+
+@media (max-width: 400px) {
+
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 50px;
+     margin-top: 50px;
+   
+  }
+  .maincon-content {
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 3rem;
+    max-width: 50%; /* Ограничиваем максимальную ширину контента */
+    color: aliceblue; /* Цвет текста */
   }
 
   .maincon-image img {
-      margin-left: 15rem; /* Уменьшаем отступы для экрана */
+    width: 400px;
+  }
+}
+
+@media (max-width: 762px) {
+
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-top: 70px;
+     padding: 0 0px;
+  
   }
 
   .maincon-content {
-      padding: 10rem; /* Уменьшаем отступы для контента */
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 5rem;
+    max-width: 50%; /* Ограничиваем максимальную ширину контента */
+    color: aliceblue; /* Цвет текста */
+  }
+  
+  .maincon-image img {
+    width: 300px;
   }
 
-  .maincon-icon img {
-      top: 50px; /* Уменьшаем верхний отступ для логотипа */
-      left: 350px; /* Уменьшаем отступ слева */
+  h1 {
+    font-size: 1.0rem; /* Используем относительный размер шрифта */
+    margin: 1rem 0;
   }
+
+  p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+
+  h1 span {
+    font-size: 1.2rem; /* Размер для части заголовка */
+  }
+  
+}
+
+@media (max-width: 820px) {
+
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-top: 70px;
+     padding: 0 0px;
+  
+  }
+
+  .maincon-content {
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 5rem;
+    max-width: 100%; /* Ограничиваем максимальную ширину контента */
+    color: aliceblue; /* Цвет текста */
+  }
+  
+  .maincon-image img {
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 1.7rem; /* Используем относительный размер шрифта */
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+
+  h1 span {
+    font-size: 2.2rem; /* Размер для части заголовка */
+  }
+  
 }
 
 @media (max-width: 1024px) {
-  .maincon {
-      flex-direction: column; /* Меняем направление на вертикальное */
-      padding: 5vw 2vw; /* Уменьшаем отступы */
-  }
 
-  .maincon-image img {
-      margin-left: 0;
-      margin-right: 0;
-      max-width: 500px; /* Уменьшаем максимальную ширину */
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-top: 70px;
+     padding: 0 0px;
+  
   }
 
   .maincon-content {
-      max-width: 100%; /* Контент занимает всю ширину */
-      padding: 5rem; /* Уменьшаем отступы */
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 5rem;
+    max-width: 50%; /* Ограничиваем максимальную ширину контента */
+    color: aliceblue; /* Цвет текста */
   }
-
-  .maincon-icon img {
-      top: 20px; /* Логотип будет ближе к верхнему краю */
-      left: 10px; /* Логотип сдвинут к левому краю */
-      max-width: 120px; /* Уменьшаем размер логотипа */
-  }
-
-  h1 {
-      font-size: 2rem; /* Меньше размер шрифта */
-  }
-
-  .icons img {
-      width: 8vw; /* Ширина иконок будет зависеть от ширины экрана */
-      max-width: 30px; /* Уменьшаем максимальную ширину */
-  }
-}
-
-@media (max-width: 768px) {
-  .maincon {
-      padding: 4vw 2vw; /* Уменьшаем отступы для маленьких экранов */
-  }
-
+  
   .maincon-image img {
-      max-width: 90%; /* Изображение становится ещё более гибким */
-      margin-left: 0;
-  }
-
-  .maincon-content {
-      padding: 3rem;
-      max-width: 100%;
-  }
-
-  .maincon-icon img {
-      top: 15px;
-      left: 5px;
-      max-width: 100px;
+    width: 700px;
   }
 
   h1 {
-      font-size: 1.8rem; /* Уменьшаем размер шрифта */
+    font-size: 1.9rem; /* Используем относительный размер шрифта */
+    margin: 1rem 0;
   }
 
   p {
-      font-size: 1rem; /* Меньше размер шрифта */
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  h1 span {
+    font-size: 2.2rem; /* Размер для части заголовка */
   }
 
   .icons img {
-      width: 10vw;
-      max-width: 25px; /* Уменьшаем максимальную ширину */
-  }
+    max-width: 20%;  
+     }
+  
 }
 
-@media (max-width: 480px) {
-  .maincon {
-      padding: 4vw 1.5vw; /* Меньше отступы для очень маленьких экранов */
-  }
+@media (max-width: 540px) {
 
-  .maincon-image img {
-      max-width: 100%;
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-top: 70px;
+     padding: 0 0px;
+  
   }
 
   .maincon-content {
-      padding: 2rem;
-      max-width: 100%;
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 5rem;
+    max-width: 50%; /* Ограничиваем максимальную ширину контента */
+    color: aliceblue; /* Цвет текста */
   }
-
-  .maincon-icon img {
-      top: 10px;
-      left: 0;
-      max-width: 80px;
+  
+  .maincon-image img {
+    width: 300px;
   }
 
   h1 {
-      font-size: 1.5rem; /* Очень маленький шрифт */
+    font-size: 1.2rem; /* Используем относительный размер шрифта */
+    margin: 1rem 0;
   }
 
   p {
-      font-size: 0.9rem; /* Меньше размер шрифта */
+    font-size: 1.1rem;
+    margin: 1rem 0;
   }
 
-  .icons img {
-      width: 12vw;
-      max-width: 20px; /* Очень маленькие иконки */
+  h1 span {
+    font-size: 1.5rem; /* Размер для части заголовка */
+  }
+  
+}
+
+@media (max-width: 350px) {
+
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 2px;
+     margin-right: 2px;
+     margin-top: 70px;
+     padding: 0 0px;
+  
+  }
+
+  .maincon-content {
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 2rem;
+    max-width: 100%; /* Ограничиваем максимальную ширину контента */
+    color: aliceblue; /* Цвет текста */
+  }
+  
+  .maincon-image img {
+    width: 300px;
+  }
+
+  h1 {
+    font-size: 1.1rem; /* Используем относительный размер шрифта */
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 1.0rem;
+    margin: 1rem 0;
+  }
+
+  h1 span {
+    font-size: 1.2rem; /* Размер для части заголовка */
+  }
+}
+
+@media (max-width: 860px) {
+
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 2px;
+     margin-right: 2px;
+     margin-top: 70px;
+     padding: 0 0px;
+  
+  }
+
+  .maincon-content {
+    padding: 2rem;
+    max-width: 100%; 
+  }
+  
+  .maincon-image img {
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 2.1rem; /* Используем относительный размер шрифта */
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 2.0rem;
+    margin: 1rem 0;
+  }
+
+  h1 span {
+    font-size: 2.5rem; /* Размер для части заголовка */
+  }
+}
+
+@media (max-width: 420px) {
+
+  .maincon {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;/* Горизонтальное размещение элементов */
+     margin-left: 2px;
+     margin-right: 2px;
+     margin-top: 70px;
+     padding: 0 0px;
+  
+  }
+
+  .maincon-content {
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 2rem;
+    max-width: 100%; /* Ограничиваем максимальную ширину контента */
+    color: aliceblue; /* Цвет текста */
+  }
+  
+  .maincon-image img {
+    width: 300px;
+  }
+
+  h1 {
+    font-size: 1.1rem; /* Используем относительный размер шрифта */
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 1.0rem;
+    margin: 1rem 0;
+  }
+
+  h1 span {
+    font-size: 1.2rem; /* Размер для части заголовка */
   }
 }
   
